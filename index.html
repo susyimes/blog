@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>苏苏的个人博客</title>
+    <meta name="description" content="苏苏的个人博客：技术记录、生活碎片、灵感与成长。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#">SuSu Blog</a>
+        <div class="nav-links">
+          <a href="#about">关于</a>
+          <a href="#posts">文章</a>
+          <a href="#contact">联系</a>
+        </div>
+      </nav>
+      <section class="hero-content">
+        <p class="kicker">个人博客 / 技术与生活</p>
+        <h1>你好，我是苏苏 👋</h1>
+        <p>
+          这里记录我的开发实验、自动化折腾、生活灵感和成长笔记。
+          欢迎留言交流（支持 GitHub 登录评论）。
+        </p>
+      </section>
+    </header>
+
+    <main class="container">
+      <section id="about" class="card">
+        <h2>关于我</h2>
+        <p>
+          我喜欢把想法快速做成可运行的小项目，持续迭代。
+          最近在研究 OpenClaw、Android 节点自动化、以及 AI 助手工作流。
+        </p>
+      </section>
+
+      <section id="posts" class="card">
+        <div class="section-head">
+          <h2>最新文章</h2>
+        </div>
+
+        <article class="post" data-slug="first-post">
+          <h3>从 0 到 1：我的自动化助手搭建记录</h3>
+          <p class="meta">2026-02-19 · 自动化 / AI</p>
+          <p>
+            这篇文章记录了我如何把网关、安卓节点、桌面微信自动发送串起来，
+            从“能跑”到“稳定可复用”的全过程。
+          </p>
+          <details>
+            <summary>阅读全文</summary>
+            <div class="post-body">
+              <p>
+                实践里最关键的是把流程固定成可重复步骤：连通性验证、权限验证、命令广告验证、失败重试策略。
+                当系统复杂起来，明确“哪一层坏了”比“马上修好”更重要。
+              </p>
+              <p>
+                我把微信单聊流程固化成 <code>WECHAT_FOREGROUND_RETRY_SENT</code>，
+                后续就可以复用，不必每次手动摸索。
+              </p>
+            </div>
+          </details>
+          <div class="comments" data-repo="susyimes/blog" data-issue-term="first-post"></div>
+        </article>
+
+        <article class="post" data-slug="second-post">
+          <h3>Android 节点能力扩展：AccessibilityService 方案</h3>
+          <p class="meta">2026-02-19 · Android</p>
+          <p>
+            给节点增加 <code>app.launch</code> 和 <code>screen.tap</code>，让远程控制更进一步。
+          </p>
+          <details>
+            <summary>阅读全文</summary>
+            <div class="post-body">
+              <p>
+                普通 App 想做全局点击，需要 AccessibilityService。加完服务声明、命令分发、
+                前台流程后，能力就能通过网关暴露给上层调用。
+              </p>
+            </div>
+          </details>
+          <div class="comments" data-repo="susyimes/blog" data-issue-term="second-post"></div>
+        </article>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>联系</h2>
+        <p>
+          GitHub：<a href="https://github.com/susyimes" target="_blank" rel="noreferrer">@susyimes</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">© <span id="year"></span> SuSu Blog</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
